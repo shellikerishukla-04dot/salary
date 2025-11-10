@@ -8,7 +8,7 @@ def calculate_salary_with_bonus(basic_salary, bonus_rate=0.10):
     return bonus, total_salary
 
 # Input from user
-basic_salary = float(input("Enter the basic salary of the employee: "))
+basic_salary = int(input("Enter the basic salary of the employee: "))
 
 # Call the function
 bonus_amount, total_salary = calculate_salary_with_bonus(basic_salary)
