@@ -1,12 +1,18 @@
-# Input the basic salary from the user
+def calculate_salary_with_bonus(basic_salary, bonus_rate=0.10):
+    """
+    Takes the basic salary and a bonus rate,
+    returns a tuple (bonus_amount, total_salary).
+    """
+    bonus = basic_salary * bonus_rate
+    total_salary = basic_salary + bonus
+    return bonus, total_salary
+
+# Input from user
 basic_salary = float(input("Enter the basic salary of the employee: "))
 
-# Calculate the bonus (10%)
-bonus = basic_salary * 0.10
-
-# Calculate total salary after adding bonus
-total_salary = basic_salary + bonus
+# Call the function
+bonus_amount, total_salary = calculate_salary_with_bonus(basic_salary)
 
 # Print results
-print(f"Bonus = {bonus:.2f}")
+print(f"Bonus = {bonus_amount:.2f}")
 print(f"Total salary after adding bonus = {total_salary:.2f}")
